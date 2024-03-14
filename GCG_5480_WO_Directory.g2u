@@ -1,0 +1,638 @@
+Program.Sub.ScreenSU.Start
+Gui.F_Input..Create
+Gui.F_Input..Size(4740,4020)
+Gui.F_Input..MinX(0)
+Gui.F_Input..MinY(0)
+Gui.F_Input..Position(0,0)
+Gui.F_Input..BackColor(-2147483633)
+Gui.F_Input..MousePointer(0)
+Gui.F_Input..MaxButton(False)
+Gui.F_Input..MinButton(False)
+Gui.F_Input..Sizeable(False)
+Gui.F_Input..Event(UnLoad,F_Input_UnLoad)
+Gui.F_Input..Caption("Directory Input")
+Gui.F_Input.frmInput.Create(Frame)
+Gui.F_Input.frmInput.Size(4350,3210)
+Gui.F_Input.frmInput.Position(60,75)
+Gui.F_Input.lblJobNum.Create(Label,"Job Number:",True,1380,255,0,120,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_Input.lblJobNum.Parent("frmInput")
+Gui.F_Input.lblToolDesc.Create(Label,"Tool Description",True,1935,255,0,120,2265,True,0,"Arial",8,-2147483633,0)
+Gui.F_Input.lblToolDesc.Parent("frmInput")
+Gui.F_Input.lblToolNum.Create(Label,"Tool Number",True,1935,255,0,120,1920,True,0,"Arial",8,-2147483633,0)
+Gui.F_Input.lblToolNum.Parent("frmInput")
+Gui.F_Input.lblProgram.Create(Label,"Program:",True,1320,255,0,120,1515,True,0,"Arial",8,-2147483633,0)
+Gui.F_Input.lblProgram.Parent("frmInput")
+Gui.F_Input.lblCustomer.Create(Label,"Customer: ",True,1170,255,0,120,675,True,0,"Arial",8,-2147483633,0)
+Gui.F_Input.lblCustomer.Parent("frmInput")
+Gui.F_Input.cmdCreate.Create(Button)
+Gui.F_Input.cmdCreate.Size(2040,585)
+Gui.F_Input.cmdCreate.Position(2250,2565)
+Gui.F_Input.cmdCreate.Parent("frmInput")
+Gui.F_Input.cmdCreate.Caption("Create")
+Gui.F_Input.cmdCreate.Event(Click,cmdCreate_Click)
+Gui.F_Input.lblProgramMngr.Create(Label,"Program Manager",True,1935,255,0,120,1095,True,0,"Arial",8,-2147483633,0)
+Gui.F_Input.lblProgramMngr.Parent("frmInput")
+Gui.F_Input.txtJobNum.Create(TextBox,"",True,2055,300,0,2250,180,True,0,"Arial",8,-2147483643,1)
+Gui.F_Input.txtJobNum.Parent("frmInput")
+Gui.F_Input.cboCustomer.Create(ComboBox)
+Gui.F_Input.cboCustomer.Size(2055,330)
+Gui.F_Input.cboCustomer.Position(2250,570)
+Gui.F_Input.cboCustomer.Parent("frmInput")
+Gui.F_Input.cboCustomer.Event(Change,cboCustomer_Change)
+Gui.F_Input.cboProgram.Create(ComboBox)
+Gui.F_Input.cboProgram.Size(2055,330)
+Gui.F_Input.cboProgram.Position(2250,1365)
+Gui.F_Input.cboProgram.Parent("frmInput")
+Gui.F_Input.txtToolNum.Create(TextBox,"",True,2055,300,0,2250,1785,True,0,"Arial",8,-2147483643,1)
+Gui.F_Input.txtToolNum.Parent("frmInput")
+Gui.F_Input.txtToolDesc.Create(TextBox,"",True,2055,300,0,2250,2175,True,0,"Arial",8,-2147483643,1)
+Gui.F_Input.txtToolDesc.Parent("frmInput")
+Gui.F_Input.cboProgramMngr.Create(ComboBox)
+Gui.F_Input.cboProgramMngr.Size(2055,330)
+Gui.F_Input.cboProgramMngr.Position(2235,945)
+Gui.F_Input.cboProgramMngr.Parent("frmInput")
+Gui.F_DirMaint..Create
+Gui.F_DirMaint..Size(8700,2520)
+Gui.F_DirMaint..MinX(0)
+Gui.F_DirMaint..MinY(0)
+Gui.F_DirMaint..Position(0,0)
+Gui.F_DirMaint..BackColor(-2147483633)
+Gui.F_DirMaint..MousePointer(0)
+Gui.F_DirMaint..MaxButton(False)
+Gui.F_DirMaint..MinButton(False)
+Gui.F_DirMaint..Sizeable(False)
+Gui.F_DirMaint..Event(UnLoad,F_DirMaint_UnLoad)
+Gui.F_DirMaint..Caption("Directory Sources")
+Gui.F_DirMaint.lbl1.Create(Label,"Start Folder",True,1935,255,0,120,120,True,0,"Arial",8,-2147483633,0)
+Gui.F_DirMaint.txtFolderDir.Create(TextBox,"",True,7620,300,0,180,360,True,0,"Arial",8,-2147483643,1)
+Gui.F_DirMaint.txtFolderDir.MaxLength(200)
+Gui.F_DirMaint.cmdFolderDir.Create(Button)
+Gui.F_DirMaint.cmdFolderDir.Size(465,375)
+Gui.F_DirMaint.cmdFolderDir.Position(7890,315)
+Gui.F_DirMaint.cmdFolderDir.Caption("^")
+Gui.F_DirMaint.cmdFolderDir.Event(Click,cmdFolderDir_Click)
+Gui.F_DirMaint.lbl2.Create(Label,"Customer Directory",True,2460,255,0,120,825,True,0,"Arial",8,-2147483633,0)
+Gui.F_DirMaint.txtCustomerDir.Create(TextBox,"",True,7620,300,0,180,1035,True,0,"Arial",8,-2147483643,1)
+Gui.F_DirMaint.txtCustomerDir.MaxLength(200)
+Gui.F_DirMaint.cmdCustomerDir.Create(Button)
+Gui.F_DirMaint.cmdCustomerDir.Size(465,375)
+Gui.F_DirMaint.cmdCustomerDir.Position(7890,990)
+Gui.F_DirMaint.cmdCustomerDir.Caption("^")
+Gui.F_DirMaint.cmdCustomerDir.Event(Click,cmdCustomerDir_Click)
+Gui.F_DirMaint.cmdSave.Create(Button)
+Gui.F_DirMaint.cmdSave.Size(855,375)
+Gui.F_DirMaint.cmdSave.Position(7530,1440)
+Gui.F_DirMaint.cmdSave.Caption("Save")
+Gui.F_DirMaint.cmdSave.Event(Click,cmdSave_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sStartDir.Declare
+v.Global.sCustomerDir.Declare
+v.Global.sCustomerCover.Declare
+v.Global.sCustomerWorkName.Declare
+v.Global.sStartDirCover.Declare
+Program.Sub.Preflight.End
+
+'Author: Alejandro Anazco Villarreal
+'Customer: Sharp Tooling Solutions
+'Program Name: GCG_5480_WO_Directory
+'Date Started: 3/19/2019
+'Description: This programs copies a folder structure from a start Folder maintained through a Maintenance Screen. It also copies a PDF Cover Sheet, filling up some fields with the information from the Work Order.
+
+Program.Sub.Main.Start
+f.Intrinsic.Control.CallSub(checkPDF)
+
+f.Intrinsic.Control.SelectCase(v.Caller.Hook)
+	f.Intrinsic.Control.Case(16630)
+		v.Passed.000091.Set("Create Dir")
+	f.Intrinsic.Control.Case(16670)	
+		f.Intrinsic.Control.If(v.Caller.Switches,=, "N S")
+			f.Intrinsic.Control.End
+		f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.If(v.Passed.000003, !=, "")
+			f.Intrinsic.Control.CallSub(checkDirectorySource)
+			f.Intrinsic.Control.CallSub(GetCustomerList)
+			f.Intrinsic.Control.CallSub(GetProgramManagerList)
+			f.Intrinsic.Control.CallSub(loadJobDetails)
+			gui.F_Input..Show
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Case(16800)
+		f.Intrinsic.Control.CallSub(checkDirectorySource)
+		f.Intrinsic.Control.CallSub(GetCustomerList)
+		f.Intrinsic.Control.CallSub(GetProgramManagerList)
+		f.Intrinsic.Control.CallSub(GetDataPostOK)
+	f.Intrinsic.Control.CaseElse
+		f.Intrinsic.Control.CallSub(loadDirMaintenance)
+		gui.F_DirMaint..Show
+f.Intrinsic.Control.EndSelect
+Program.Sub.Main.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Closes ODBC connection, default to connection : "con"
+f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndIf
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project GCG_5480_WO_Directory.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.loadIcon.Start
+f.Intrinsic.Control.CallSub(LoadIcon)
+v.Local.sIcon.Declare
+'sets the icon
+f.Intrinsic.String.Build("{0}\ART\gss2.ico", v.Caller.GlobalDir, v.Local.sIcon)
+gui.F_DirMaint..Icon(v.Local.sIcon)
+gui.F_Input..Icon(v.Local.sIcon)
+Program.Sub.loadIcon.End
+
+Program.Sub.checkDirectorySource.Start
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.If(v.DataTable.ControlDT.Exists)
+		f.Data.DataTable.Close("ControlDT")
+	f.Intrinsic.Control.EndIf
+	'Reading the custom table that hold the sources path for the Start Folder and the customer Folder.
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("ControlDT", "con", "select * from GCG_5480_Folder_LOC")
+	f.ODBC.Connection!con.Close
+	
+	'The custom Table should always have only two record, one for Start Folder and one for Customer.
+	f.Intrinsic.Control.If(v.DataTable.ControlDT.RowCount, != , 2)
+		'if there're not exactly 2 records, call the screen.
+		gui.F_DirMaint..Show
+	f.Intrinsic.Control.ElseIf(v.DataTable.ControlDT.RowCount, =, 2)
+		'if there're exactly 2 records, set Global Variables.
+		f.Data.DataView.Create("ControlDT", "startDirDV", 22, "DirectoryName = 'StartDirectory'", "")
+		v.Global.sStartDir.Set(v.DataView.ControlDT!startDirDV(0).Directory!FieldValTrim)
+		f.Data.DataView.Close("ControlDT", "startDirDV")
+		
+		f.Data.DataView.Create("ControlDT", "customerDirDV", 22, "DirectoryName = 'CustomerDirectory'", "")
+		v.Global.sCustomerDir.Set(v.DataView.ControlDT!customerDirDV(0).Directory!FieldValTrim)
+		f.Data.DataView.Close("ControlDT", "customerDirDV")	
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.checkDirectorySource.End
+
+Program.Sub.cmdFolderDir_Click.Start
+v.Local.sRet.Declare
+f.Intrinsic.Control.Try
+	'Folder Browser.
+	f.Intrinsic.UI.FolderBrowser("Select a Start Directory", , v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet, !=, "***CANCEL***")
+		gui.F_DirMaint.txtFolderDir.Text(v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdFolderDir_Click.End
+
+Program.Sub.cmdCustomerDir_Click.Start
+v.Local.sRet.Declare
+f.Intrinsic.Control.Try
+	'Folder Browser.
+	f.Intrinsic.UI.FolderBrowser("Select a Start Directory", , v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet, !=, "***CANCEL***")
+		gui.F_DirMaint.txtCustomerDir.Text(v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdCustomerDir_Click.End
+
+Program.Sub.cmdSave_Click.Start
+v.Local.sSQL.Declare
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Redim(0, 1)
+	v.Global.sStartDir.Set(v.Screen.F_DirMaint!txtFolderDir.Text!FieldValTrim)
+	f.Intrinsic.String.Right(v.Global.sStartDir, 1, v.Local.sTemp)
+	f.Intrinsic.Control.If(v.Local.sTemp, =, "\")
+		f.Intrinsic.String.Build("Insert into  GCG_5480_Folder_LOC (DirectoryName, Directory) Values ('StartDirectory', '{0}')", v.Global.sStartDir, v.Local.sSQL(0))
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("Insert into  GCG_5480_Folder_LOC (DirectoryName, Directory) Values ('StartDirectory', '{0}\')", v.Global.sStartDir, v.Local.sSQL(0))
+	f.Intrinsic.Control.EndIf
+	
+	v.Global.sCustomerDir.Set(v.Screen.F_DirMaint!txtCustomerDir.Text!FieldValTrim)
+	f.Intrinsic.String.Right(v.Global.sCustomerDir, 1, v.Local.sTemp)
+	f.Intrinsic.Control.If(v.Local.sTemp, =, "\")
+		f.Intrinsic.String.Build("Insert into  GCG_5480_Folder_LOC (DirectoryName, Directory) Values ('CustomerDirectory', '{0}')", v.Global.sCustomerDir, v.Local.sSQL(1))
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("Insert into  GCG_5480_Folder_LOC (DirectoryName, Directory) Values ('CustomerDirectory', '{0}\')", v.Global.sCustomerDir, v.Local.sSQL(1))
+	f.Intrinsic.Control.EndIf
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.ODBC.Connection!con.Execute("Delete From GCG_5480_Folder_LOC")
+		f.ODBC.Connection!con.Execute(v.Local.sSQL(0))
+		f.ODBC.Connection!con.Execute(v.Local.sSQL(1))
+		f.Data.DataTable.CreateFromSQL("ControlDT", "con", "select * from GCG_5480_Folder_LOC")
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.DataTable.ControlDT.RowCount, =, 2)
+		f.Intrinsic.UI.Msgbox("Update Complete")
+	f.Intrinsic.Control.Else
+		f.Intrinsic.UI.Msgbox("Update Unsuccessful")
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.DataTable.Close("ControlDT")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.F_DirMaint_UnLoad.Start
+f.Intrinsic.Control.Try
+	'Closes ODBC connection, default to connection : "con"
+	f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+		f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.F_DirMaint_UnLoad.End
+
+Program.Sub.F_Input_UnLoad.Start
+f.Intrinsic.Control.Try
+	'Closes ODBC connection, default to connection : "con"
+	f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+		f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.F_Input_UnLoad.End
+
+Program.Sub.cmdCreate_Click.Start
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.CallSub(createParentDir)
+	f.Intrinsic.Control.CallSub(fillPdfForm)
+	f.Intrinsic.UI.Msgbox("Done")
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdCreate_Click.End
+
+Program.Sub.GetCustomerList.Start
+v.Local.sRet.Declare
+v.Local.sList.Declare
+v.Local.iCnt.Declare
+v.Local.sFileTest.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.If(v.Global.sCustomerDir, !=, "")
+		f.Intrinsic.File.GetFileList(v.Global.sCustomerDir, 16, v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+	
+	gui.F_Input.cboCustomer.AddItem("", 0)
+	f.Intrinsic.Control.If(v.Local.sRet, !=, "")
+		f.Intrinsic.String.Split(v.Local.sRet, ":", v.Local.sList)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sList.UBound, 1)
+			f.Intrinsic.String.Split(v.Local.sList(v.Local.iCnt), ".", v.Local.sFileTest)
+			f.Intrinsic.Control.If(v.Local.sFileTest.UBound, =, 0)
+				gui.F_Input.cboCustomer.AddItem(v.Local.sList(v.Local.iCnt))
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+	f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetCustomerList.End
+
+Program.Sub.GetProgramList.Start
+v.Local.sDir.Declare
+v.Local.sRet.Declare
+v.Local.sList.Declare
+v.Local.iCnt.Declare
+v.Local.sFileTest.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Build("{0}{1}\", v.Global.sCustomerDir, v.Screen.F_Input!cboCustomer.Value, v.Local.sDir)
+	f.Intrinsic.Control.If(v.Local.sDir, !=, "")
+		f.Intrinsic.File.GetFileList(v.Local.sDir, 16, v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Local.sRet, !=, "")
+		f.Intrinsic.String.Split(v.Local.sRet, ":", v.Local.sList)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sList.UBound, 1)
+			f.Intrinsic.String.Split(v.Local.sList(v.Local.iCnt), ".", v.Local.sFileTest)
+			f.Intrinsic.Control.If(v.Local.sFileTest.UBound, =, 0)
+				gui.F_Input.cboProgram.AddItem(v.Local.sList(v.Local.iCnt))
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+	f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetProgramList.End
+
+Program.Sub.GetProgramManagerList.Start
+v.Local.iCnt.Declare
+
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("managerListDT", "con", "select * from V_EMPLOYEE_MSTR where Dept_Employee = 'PM'")
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.DataTable.managerListDT.RowCount, >, 0)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.DataTable.managerListDT.RowCount--, 1)
+			gui.F_Input.cboProgramMngr.AddItem(v.DataTable.managerListDT(v.Local.iCnt).Name!FieldValTrim)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetProgramManagerList.End
+
+Program.Sub.cboCustomer_Change.Start
+gui.F_Input.cboProgram.ClearItems
+gui.F_Input.cboProgram.AddItem("", 0)
+f.Intrinsic.Control.CallSub(GetProgramList)
+Program.Sub.cboCustomer_Change.End
+
+Program.Sub.loadJobDetails.Start
+v.Local.sTemp.Declare
+v.Local.iIndex.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.Control.If(v.Passed.000004.Trim, =, "")
+		f.Intrinsic.String.Build("{0}{1}", v.Passed.000003, v.Passed.000004, v.Local.sTemp)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0}-{1}", v.Passed.000003, v.Passed.000004, v.Local.sTemp)
+	f.Intrinsic.Control.EndIf
+	gui.F_Input.txtJobNum.Text(v.Local.sTemp)
+	
+	f.Intrinsic.Control.If(v.Passed.000007, =, "")
+		f.Intrinsic.String.Build("{0}{1}", v.Passed.000006, v.Passed.000007, v.Local.sTemp)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0}-{1}", v.Passed.000006, v.Passed.000007, v.Local.sTemp)
+	f.Intrinsic.Control.EndIf
+	gui.F_Input.txtToolNum.Text(v.Local.sTemp)
+	
+	gui.F_Input.txtToolDesc.Text(v.Passed.000009)
+	
+	f.Intrinsic.String.Build("Select * from WO_USER_FLDS where Job = '{0}' and Suffix = '{1}'", v.Passed.000003, v.Passed.000004, v.Local.sTemp)
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("loadDT", "con", v.Local.sTemp)
+	f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.If(v.DataTable.loadDT.RowCount, =, 1)
+		gui.F_Input.cboProgramMngr.FindItem(v.DataTable.loadDT(0).User_6!FieldValTrim, true, v.Local.iIndex)
+		gui.F_Input.cboProgramMngr.ListIndex(v.Local.iIndex)
+		gui.F_Input.cboProgramMngr.Text(v.DataTable.loadDT(0).User_6!FieldValTrim)
+		v.Local.iIndex.Set(0)
+		gui.F_Input.cboProgram.FindItem(v.DataTable.loadDT(0).User_7!FieldValTrim, true, v.Local.iIndex)
+		gui.F_Input.cboProgram.ListIndex(v.Local.iIndex)
+		gui.F_Input.cboProgram.Text(v.DataTable.loadDT(0).User_7!FieldValTrim)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadJobDetails.End
+
+Program.Sub.loadDirMaintenance.Start
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("ControlDT", "con", "select * from GCG_5480_Folder_LOC")
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.DataTable.ControlDT.RowCount, =, 2)
+		f.Data.DataView.Create("ControlDT", "startDirDV", 22, "DirectoryName = 'StartDirectory'", "")
+		v.Global.sStartDir.Set(v.DataView.ControlDT!startDirDV(0).Directory!FieldValTrim)
+		gui.F_DirMaint.txtFolderDir.Text(v.Global.sStartDir)
+		f.Data.DataView.Close("ControlDT", "startDirDV")
+		
+		f.Data.DataView.Create("ControlDT", "customerDirDV", 22, "DirectoryName = 'CustomerDirectory'", "")
+		v.Global.sCustomerDir.Set(v.DataView.ControlDT!customerDirDV(0).Directory!FieldValTrim)
+		gui.F_DirMaint.txtCustomerDir.Text(v.Global.sCustomerDir)
+		f.Data.DataView.Close("ControlDT", "customerDirDV")	
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.DataTable.Close("ControlDT")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadDirMaintenance.End
+
+Program.Sub.createParentDir.Start
+v.Local.bDirExists.Declare
+v.Local.sDirTemp.Declare
+v.Local.sToolDescTemp.Declare
+v.Local.sRet.Declare
+v.Local.sDirRet.Declare
+v.Local.sList.Declare
+v.Local.iCnt.Declare
+v.Local.sDirNew.Declare
+v.Local.sDirStartTemp.Declare
+v.Local.sPassedData.Declare
+
+v.Local.sTaskShell.Declare
+v.Local.sBatName.Declare
+v.Local.sTaskShellRet.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Split(v.Screen.F_Input!txtToolDesc.Text, " ", v.Local.sRet)
+	f.Intrinsic.String.Join(v.Local.sRet, "_", v.Local.sToolDescTemp)
+	f.Intrinsic.String.Build("{0}{1}\{2}\{3}_{4}_{5}", v.Global.sCustomerDir, v.Screen.F_Input!cboCustomer.Value, v.Screen.F_Input!cboProgram.Value, v.Screen.F_Input!txtJobNum.Text, v.Screen.F_Input!txtToolNum.Text, v.Local.sToolDescTemp, v.Local.sDirTemp)
+	f.Intrinsic.String.Build("{0}_{1}_{2}", v.Screen.F_Input!txtJobNum.Text, v.Screen.F_Input!txtToolNum.Text, v.Local.sToolDescTemp, v.Global.sCustomerWorkName)
+	f.Intrinsic.File.CreateDir(v.Local.sDirTemp)
+	v.Global.sCustomerCover.Set(v.Local.sDirTemp)
+	
+	'f.Intrinsic.String.Build("{0}\", v.Local.sDirTemp, v.Local.sDirNew)
+	f.Intrinsic.String.Build("xcopy {2}{0}*.*{2} {2}{1}\{2} /E /I /H /K /X /Y", v.Global.sStartDir, v.Local.sDirTemp, v.Ambient.DblQuote, v.Local.sTaskShell)
+	f.Intrinsic.String.Build("{0}\xcopy{1}.bat",v.Caller.FilesDir, v.Caller.Terminal, v.Local.sBatName)
+	f.Intrinsic.File.String2File(v.Local.sBatName, v.Local.sTaskShell)
+
+	f.Intrinsic.Task.ShellExecSync(v.Caller.Handle, "runas", v.Local.sBatName, "", "", 1)
+	'f.Intrinsic.Task.LaunchAsync (v.Local.sBatName, 0, v.Local.sTaskShellRet) 
+	
+	f.Intrinsic.File.DeleteFile(v.Local.sBatName)
+	
+'	f.Intrinsic.File.GetFileList(v.Global.sStartDir, 16, v.Local.sDirRet)
+'	f.Intrinsic.String.Split(v.Local.sDirRet, ":", v.Local.sList)
+'	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sList.UBound, 1)
+'		f.Intrinsic.String.Build("{0}\{1}", v.Local.sDirTemp, v.Local.sList(v.Local.iCnt), v.Local.sDirNew)
+'		f.Intrinsic.File.CreateDir(v.Local.sDirNew)
+'		f.Intrinsic.String.Build("{0}{1}", v.Global.sStartDir, v.Local.sList(v.Local.iCnt), v.Local.sDirStartTemp)
+'		f.Intrinsic.Control.CallSub(mapDirectories, newDir, v.Local.sDirNew, startTemp, v.Local.sDirStartTemp)
+'	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	f.Intrinsic.String.Split(v.Screen.F_Input!txtJobNum.Text, "-", v.Local.sPassedData)
+	f.Intrinsic.Control.If(v.Local.sPassedData.UBound, =, 1)
+		f.Intrinsic.Control.CallSub(SaveUserFields, passedJob, v.Local.sPassedData(0), passedSuff, v.Local.sPassedData(1))
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.createParentDir.End
+
+Program.Sub.mapDirectories.Start
+v.Local.iCnt.Declare
+v.Local.sDirNew.Declare
+v.Local.sDirStartTemp.Declare
+v.Local.sDirRet.Declare
+v.Local.sList.Declare
+v.Local.sTemp.Declare
+v.Local.sCheckExtension.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Build("{0}\", v.Args.startTemp, v.Local.sTemp)
+	f.Intrinsic.File.GetFileList(v.Local.sTemp, 16, v.Local.sDirRet)
+	f.Intrinsic.Control.If(v.Local.sDirRet, !=, "")
+		f.Intrinsic.String.Split(v.Local.sDirRet, ":", v.Local.sList)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sList.UBound, 1)
+			f.Intrinsic.String.Split(v.Local.sList(v.Local.iCnt), ".", v.Local.sCheckExtension)
+			f.Intrinsic.String.Build("{0}\{1}",v.Args.newDir, v.Local.sList(v.Local.iCnt), v.Local.sDirNew)
+			f.Intrinsic.String.Build("{0}\{1}", v.Args.startTemp, v.Local.sList(v.Local.iCnt), v.Local.sDirStartTemp)
+			f.Intrinsic.Control.If(v.Local.sCheckExtension.UBound, =, 1)
+				f.Intrinsic.File.CopyFile(v.Local.sDirStartTemp, v.Local.sDirNew)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.File.CreateDir(v.Local.sDirNew)
+				f.Intrinsic.Control.CallSub(mapDirectories, newDir, v.Local.sDirNew, startTemp, v.Local.sDirStartTemp)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.mapDirectories.End
+
+Program.Sub.GetDataPostOK.Start
+v.Local.sSQL.Declare
+v.Local.iIndex.Declare
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Intrinsic.String.Build("Select Job, Suffix, Job +'-'+ Suffix as JobSuff, Router, Description from V_JOB_HEADER where JOB = '{0}' and SUFFIX = '{1}'", v.Passed.009000.Trim, v.Passed.009001.Trim, v.Local.sSQL)
+		f.Data.DataTable.CreateFromSQL("jobDataDT", "con", v.Local.sSQL)
+		
+		f.Intrinsic.String.Build("Select Job, Suffix, USER_6 from WO_USER_FLDS where JOB = '{0}' and SUFFIX = '{1}'", v.Passed.009000.Trim, v.Passed.009001.Trim, v.Local.sSQL)
+		f.Data.DataTable.CreateFromSQL("UserFieldsDT", "con", v.Local.sSQL)
+	f.ODBC.Connection!con.Close
+	
+	f.Intrinsic.Control.If(v.DataTable.jobDataDT.RowCount, =, 1)
+		gui.F_Input.txtJobNum.Text(v.DataTable.jobDataDT(0).JobSuff!FieldValTrim)
+		gui.F_Input.txtToolNum.Text(v.DataTable.jobDataDT(0).Router!FieldValTrim)
+		gui.F_Input.txtToolDesc.Text(v.DataTable.jobDataDT(0).Description!FieldValTrim)
+	f.Intrinsic.Control.EndIf	
+	f.Data.DataTable.Close("jobDataDT")
+	
+	f.Intrinsic.Control.If(v.DataTable.UserFieldsDT.RowCount, =, 1)
+		gui.F_Input.cboProgramMngr.FindItem(v.DataTable.UserFieldsDT(0).User_6!FieldValTrim, true, v.Local.iIndex)
+		gui.F_Input.cboProgramMngr.ListIndex(v.Local.iIndex)
+	f.Intrinsic.Control.Else
+		gui.F_Input..Show
+	f.Intrinsic.Control.EndIf
+	f.Data.DataTable.Close("UserFieldsDT")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetDataPostOK.End
+
+Program.Sub.SaveUserFields.Start
+v.Local.sSQL.Declare
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Build("Select Job, Suffix, User_6 from WO_USER_FLDS where JOB = '{0}' and SUFFIX = '{1}'", v.Args.passedJob, v.Args.passedSuff, v.Local.sSQL)
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("userFieldsDT", "con", v.Local.sSQL)
+	f.ODBC.Connection!con.Close
+	'*****************************Add user 7 that is program Manager
+	f.Intrinsic.Control.If(v.DataTable.userFieldsDT.RowCount, =, 1)
+		f.Intrinsic.String.Build("Update WO_USER_FLDS Set User_6 = '{0}', User_7 = '{1}' where JOB = '{2}' and SUFFIX = '{3}'", v.Screen.F_Input!cboProgramMngr.Value, v.Screen.F_Input!cboProgram.Value, v.Args.passedJob, v.Args.passedSuff, v.Local.sSQL)
+		f.ODBC.Connection!con.OpenCompanyConnection
+			f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.ElseIF(v.DataTable.userFieldsDT.RowCount, =, 0)
+	
+		f.Intrinsic.String.Build("Insert into WO_USER_FLDS (Job, Suffix, User_6, User_7) Values ('{0}', '{1}', '{2}', '{3}')", v.Args.passedJob, v.Args.passedSuff, v.Screen.F_Input!cboProgramMngr.Value, v.Screen.F_Input!cboProgram.Value, v.Local.sSQL)
+		f.ODBC.Connection!con.OpenCompanyConnection
+			f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.EndIf
+	f.Data.DataTable.Close("userFieldsDT")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.SaveUserFields.End
+
+Program.Sub.checkPDF.Start
+v.Local.sFilePath.Declare
+v.Local.sFilePDF.Declare
+v.Local.sNewFilePDF.Declare
+v.Local.bTemp.Declare
+
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Build("{0}\CUSTOM\GCG_5480\GCG_5480_CoverSheet.pdf", v.Caller.GlobalDir, v.Local.sNewFilePDF)
+	f.Intrinsic.File.Exists(v.Local.sNewFilePDF, v.Local.bTemp)
+	f.Intrinsic.Control.If(v.Local.bTemp)
+		v.Global.sStartDirCover.Set(v.Local.sNewFilePDF)
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	v.Local.bTemp.Set(false)
+	
+	f.Intrinsic.String.Build("{0}\CUSTOM\GCG_5480", v.Caller.GlobalDir, v.Local.sFilePath)
+	f.Intrinsic.File.DirExists(v.Local.sFilePath, v.Local.bTemp)
+	f.Intrinsic.Control.If(v.Local.bTemp, =, False)
+		f.Intrinsic.File.CreateDir(v.Local.sFilePath)
+	f.Intrinsic.Control.EndIf
+	v.Local.bTemp.Set(false)
+	
+	f.Intrinsic.String.Build("{0}\FILES\GCG_5480_CoverSheet.pdf", v.Caller.GlobalDir, v.Local.sFilePDF)
+	
+	f.Intrinsic.File.Exists(v.Local.sFilePDF, v.Local.bTemp)
+	f.Intrinsic.Control.If(v.Local.bTemp)
+		f.Intrinsic.File.CopyOpenFile(v.Local.sFilePDF, v.Local.sNewFilePDF)
+		v.Global.sStartDirCover.Set(v.Local.sNewFilePDF)
+	f.Intrinsic.Control.EndIf	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.checkPDF.End
+
+Program.Sub.fillPdfForm.Start
+v.Local.sFilePath.Declare
+v.Local.bRet.Declare
+v.Local.sValues.Declare
+v.Local.sTemp.Declare
+f.Intrinsic.Control.Try
+
+	f.Intrinsic.String.Build("{0}\CMM\{1}.pdf", v.Global.sCustomerCover, v.Global.sCustomerWorkName, v.Local.sFilePath)
+'	f.Intrinsic.UI.Msgbox(v.Local.sFilePath)
+'	f.Intrinsic.UI.Msgbox(v.Global.sStartDirCover)
+
+	'open Template File
+	f.Automation.PDF.Open("cover", v.Global.sStartDirCover)
+
+	'check if file exists.
+	f.Intrinsic.File.Exists(v.Local.sFilePath, v.Local.bRet)
+	f.Intrinsic.Control.If(v.Local.bRet,=,true)
+		'if file exists, prompt with a screen for them to enter in a new filepath. do not let them choose the same name. 
+		f.Intrinsic.UI.Msgbox("File Exists; Please Delete Existing File or Choose New File Name!!!","File Exists!")
+		f.Intrinsic.UI.ShowSaveFileDialog(v.Local.sFilePath,"pdf",v.Local.sFilePath)
+		f.Intrinsic.String.Right(v.Local.sFilePath.Trim,4,v.Local.sTemp)
+		f.Intrinsic.Control.If(v.Local.sTemp,<>,".pdf")
+			f.Intrinsic.String.Build("{0}.pdf",v.Local.sFilePath.Trim,v.Local.sFilePath)
+		f.Intrinsic.Control.EndIf
+		
+	f.Intrinsic.Control.EndIf
+
+	'just so you can see in the debugger the filenames and values coming from template if needed
+	'not actually needed for application
+'	f.Automation.PDF.GetFieldNamesAndValues("test",v.Local.sTemp)
+
+	'sets fields and saves to destination file.
+	'first set of parameters is static, those will NOT change. the last set of values passed will come from job header and customer master
+	f.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", v.Screen.F_Input!cboCustomer.Value, v.Screen.F_Input!txtToolDesc.Text, v.Screen.F_Input!txtToolNum.Text, v.Screen.F_Input!cboProgram.Value, v.Screen.F_Input!txtJobNum.Text, v.Local.sValues)
+	Function.Automation.PDF.SetFormFields("cover", v.Local.sFilePath,"CustomerName*!*ToolName*!*ToolNumber*!*Program*!*JobNumber", v.Local.sValues, False)
+
+	'must close before program exit. 
+	f.Automation.PDF.Close("cover")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.fillPdfForm.End
